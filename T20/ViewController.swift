@@ -79,27 +79,7 @@ extension ViewController {
 //
 //
     }
-//    func actionReload(firstTime: Bool = false){
-//         let urlString = self.urlString.replacingOccurrences(of: "http://", with: "https://")
-//        let replaceDomain = urlString.replacingOccurrences(of: "mrcat.com", with: "\(GlobalInfoUtil.domain).com")
-//
-//        if firstTime {
-//            txtAppend = replaceDomain.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed) ?? ""
-//            let url = URL(string: txtAppend)
-//            if loadCS {
-//                MixPanelLog().setEvent(["CS_URL":txtAppend, "CS_URL_DNS": UIUtil.urlToIP_gethostbyname(URL(string: self.urlString)!).joined(separator: ",")], EnumUtil.action.customer_service.rawValue)
-//                print("stringsting1: \(self.urlString)")
-//                print("stringsting2: \(txtAppend)")
-//            }
-//            webView.load(URLRequest(url: url!))
-//            webView.allowsBackForwardNavigationGestures = true
-//        }else{
-//            webView.reload()
-//        }
-//    }
-//    func webViewReload() {
-//        webView.reload()
-//    }
+
     func dismissPage(){
         
 //        if csDelegateType == .backRootView {
@@ -151,26 +131,6 @@ extension ViewController {
 extension ViewController: WKUIDelegate, WKNavigationDelegate{
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         let reqUrl = webView.url?.absoluteString
-//        print("loadedURL:\(reqUrl)")
-//        if (reqUrl?.hasPrefix("alipays://"))! || (reqUrl?.hasPrefix("alipay://"))! {
-//            let bSucc = UIApplication.shared.openURL(webView.url!)
-//            if !bSucc {
-//                let util = NormalAlertLauncher(title: "提示", message: "未检测到支付宝客户端，请安装后重试。", defaultColor: true)
-//                util.addButton(title: MessageUtil.cancel) {
-//                    util.popOut()
-//                }
-//                util.addButton(title: "立即安装") {
-//                    let urlStr = "https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8"
-//                    let downloadURL = URL(string: urlStr)
-//                    UIApplication.shared.openURL(downloadURL!)
-//                }
-//                util.presentIn(self)
-//            }
-//        }
-        
-        
-//        print("convertTOIp: \(urlToIP(webView.url!))")
-//        customLoading.isHidden = false
     }
     
     
